@@ -1,0 +1,131 @@
+ :root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+ }
+
+ *, ::before, ::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     box-sizing: inherit;
+     font-family: 'Poppins', sans-serif;
+     font-size: 15px;
+     background-color: var(--very-light-gray);
+     color: var(--grayish-blue); 
+ }
+
+ main {
+   max-width:1200px;
+    margin: 5% auto;
+    padding:30px 30px; 
+ } 
+
+ /* HEADER */
+ .header {
+    text-align: center;
+    padding-bottom: 1.75rem;
+    background-color: var(--very-light-gray);
+    margin: 2rem auto;
+    
+ }
+ .header h1 {
+    font-size: 34px;
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+ }
+
+ .header h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+ .header p {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+ /* CARDS */
+ .cards {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 25px;
+ }
+
+ .card {
+    box-shadow: 1px 10px 15px 10px #e6eff7;
+    padding: 30px;
+ }
+
+ .card h2{
+    font-size: 18px;
+    color: var(--very-dark-blue);
+    padding-bottom: 10px;
+ }
+
+ .card p {
+     font-size: 15px;
+     padding-bottom: 35px;
+ }
+
+ .card img {
+     float: right;
+ }
+
+ .column {
+     display: flex;
+     flex-direction: column;
+     gap: 25px;
+ }
+ .card-supervisor { 
+    border-top: 4px solid var(--cyan);
+    align-self: center;
+
+ }
+.card-team{
+    border-top: 4px solid var(--red);
+    align-self: flex-end;
+}
+.card-karma {
+    border-top: 4px solid var(--orange);
+    align-self: center;
+}
+.card-calc {
+    border-top: 4px solid var(--blue);
+    align-self: center;
+}
+
+/* Layout for mobile*/ 
+@media screen and (max-width:800px ) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .card-karma{
+        align-self: unset;
+    }
+    .card-team {
+        align-self: unset;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+    .header h2 {
+        font-size:24px;
+
+    }
+    .cards h2 {
+        font-size:18px;
+    }
+    .cards p{
+        font-size: 13px;
+    }
+}
